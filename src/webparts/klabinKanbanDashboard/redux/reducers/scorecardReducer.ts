@@ -10,13 +10,13 @@ export const scorecardReducer = (state = initialState, action:Actions) => {
         case ScorecardActions.MOVE_CARD:{
             const {from, fromList, to, toList} = action.payload;
             const data = state.data;
-            return produce(data, draftState => {
+            return {...state, data: produce(data, draftState => {
                 const draggedList = draftState[fromList];
                 const draggedCard = draggedList.data[from];
                 draftState[fromList].data.splice(from, 1);
                 draftState[toList].data.splice(to, 0, draggedCard);
                 console.log(draftState);
-            });
+            })};
         }
             
         default: return state;

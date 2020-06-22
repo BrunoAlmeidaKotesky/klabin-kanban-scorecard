@@ -7,7 +7,7 @@ export default function Card({code, titleIdea, imgIdea, idx, listIdx}:Props):JSX
     const {ref, isDragging} = useCardDnd(code.codeIdea, idx, listIdx);
     return(
         <div ref={ref} className={isDragging === false ? styles.klabCardDiv : styles.isDragging}>
-            <img src={imgIdea} alt={titleIdea} />
+            {(imgIdea && imgIdea !== '') && <img src={imgIdea} alt={titleIdea} />}
             <a href={code.codeUrl}><span>{code.codeIdea}</span></a>
             <span>{titleIdea}</span>
         </div>);
