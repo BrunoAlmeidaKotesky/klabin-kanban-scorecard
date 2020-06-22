@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "klabin-kanban-dashboard-client-side-solution",
+    "id": "0aa37c44-a732-4b52-a825-b5ee711fa235",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/klabin-kanban-dashboard.sppkg"
+  }
+}

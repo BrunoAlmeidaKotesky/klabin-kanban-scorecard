@@ -1,0 +1,59 @@
+.klabListTop {
+    display: grid;
+    padding: 0 5px;
+    background: #dceaf3;
+    border-radius: 5px;
+    border: 1px outset black;
+    grid-template-areas:
+    'h2 h3'
+    'card card';
+    //Sub-Elements:
+
+    h2 { grid: h2}
+    h3 { grid: h3}
+    h2,h3{
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        white-space: nowrap;
+    }
+    ul {
+      grid-area: card;
+      padding: 0;
+    }
+}
+
+.klabBoard{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 170px);
+    padding: 5px;
+    grid-gap: 10px;
+}
+
+.klabCardDiv {
+    position: relative;
+    background: #FFF;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    box-shadow: 0 1px 4px 0 rgba(192,208,230,0.8);
+    border-top: 20px solid rgba(230,236,245,0.4);
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+
+    img { 
+        width: 24px;
+        height: 24px;
+        border-radius: 2px;
+        margin-top: 2px;
+    }
+}
+.isDragging{
+    border: 2px dashed rgba(0,0,0,0.8);
+    border-radius: 0;
+    padding-top: 31px;
+    background: transparent;
+    box-shadow: none;
+    cursor: grabbing;
+    img,span,a{ opacity: 0;}
+}

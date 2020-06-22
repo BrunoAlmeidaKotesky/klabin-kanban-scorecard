@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "klabin-kanban-dashboard-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/klabinKanbanDashboard/KlabinKanbanDashboardWebPart.js",
+          "manifest": "./src/webparts/klabinKanbanDashboard/KlabinKanbanDashboardWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "KlabinKanbanDashboardWebPartStrings": "lib/webparts/klabinKanbanDashboard/loc/{locale}.js"
+  }
+}
