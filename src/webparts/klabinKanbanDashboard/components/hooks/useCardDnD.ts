@@ -14,7 +14,7 @@ interface DragItem {
 export function useCardDnd(id: string, idx: number, listIdx: number) {
     const ref = useRef<HTMLDivElement>(null);
     const dispatch = useDispatch();
-    const lists = useSelector((store:RootState) => store.scorecardReducer);
+    const lists = useSelector((store:RootState) => store.scorecardReducer.data);
     const move = useCallback(({from, fromList, to, toList}:MoveCard) => dispatch(moveCard({from, to, toList, fromList})), [lists]);
 
     const [{isDragging}, dragRef] = useDrag({

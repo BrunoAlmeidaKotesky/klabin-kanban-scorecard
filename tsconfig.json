@@ -24,7 +24,7 @@
       "reflect-metadata" 
      ],
     "lib": [
-      "es5",
+      "es2019",
       "dom",
       "es2015.collection",
       "ES2015.Iterable"
