@@ -5,6 +5,7 @@ import thunkMiddleware from 'redux-thunk';
 import {toastsReducer as toasts} from 'react-toastify-redux';
 import { IStore } from '../models/interfaces/IStore';
 
+//Boilerplate de configurações do Redux, abaixo habilita a extensão redux dev tools
 declare global {
     interface Window {
       __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
@@ -17,7 +18,8 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootReducer = combineReducers({
     scorecardReducer,
     toasts
-   });
+});
+
 export type RootState = ReturnType<typeof rootReducer>;
 
 function configureStore(){

@@ -5,13 +5,13 @@ import {Board} from './Board';
 import {Provider} from 'react-redux';
 import store from '../redux/store';
 
+/**Componente principal para ser renderizado pelo ReactDom */
 export default function KlabinKanbanDashboardApp(props:IKlabinKanbanDashboardProps):JSX.Element {
     return (
       <Provider store={store()}>
-      <div className={ styles.klabinKanbanDashboard }>
-              <Board/>
-      </div>
+        <div className={ styles.klabinKanbanDashboard }>
+                <Board/>
+        </div>
       </Provider>
-      
     );
 }

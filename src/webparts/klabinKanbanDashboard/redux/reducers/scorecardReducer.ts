@@ -6,7 +6,8 @@ export const scorecardReducer = (state = initialState, action:Actions) => {
     switch(action.type){
         case ScorecardActions.SET_INIT_DATA:
             return{...state, data: action.payload.lists};
-            
+
+        //Utilizando a biblioteca immer.js nessa action de mover o card para trabalhar com dados imutáveis de maneira mutável
         case ScorecardActions.MOVE_CARD:{
             const {from, fromList, to, toList} = action.payload;
             const data = state.data;
