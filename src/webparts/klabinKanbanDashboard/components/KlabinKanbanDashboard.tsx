@@ -9,8 +9,9 @@ import store from '../redux/store';
 export default function KlabinKanbanDashboardApp(props:IKlabinKanbanDashboardProps):JSX.Element {
     return (
       <Provider store={store()}>
+        <h4 style={{margin: 0}}>A ideia é que o board abaixo tenha como caber todas as colunas possíveis igual presente no vídeo aos 44:00m, talvez uma maneira de implementar um scroll horizontal</h4>
         <div className={ styles.klabinKanbanDashboard }>
-                <Board/>
+            <Board/>
         </div>
       </Provider>
     );
