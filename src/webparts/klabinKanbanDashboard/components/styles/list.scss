@@ -5,16 +5,17 @@
     border-radius: 5px;
     border: 1px outset black;
     grid-template-areas:
-    'h2 h3'
+    'h3 h4'
     'card card';
     //Sub-Elements:
-
-    h2 { grid: h2}
+    grid-template-rows: auto 1fr;
     h3 { grid: h3}
-    h2,h3{
+    h4 { grid: h4}
+    h3,h4{
         text-overflow: ellipsis;
         overflow: hidden; 
         white-space: nowrap;
+        margin-bottom: 0;
     }
     ul {
       grid-area: card;
