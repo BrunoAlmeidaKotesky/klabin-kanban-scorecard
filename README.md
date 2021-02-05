@@ -1,4 +1,4 @@
-## klabin-kanban-dashboard
+## kanban-dashboard-SPFx
 
 This is where you include your WebPart documentation.
 
